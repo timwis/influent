@@ -5,5 +5,8 @@ export default FirebaseCollection.extend({
   model: IdeaModel,
   url: function () {
     return `https://influent.firebaseio.com/boards/${this.parent.id}/ideas`
+  },
+  comparator: function (idea) {
+    return -idea.votes
   }
 })
