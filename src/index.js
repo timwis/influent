@@ -1,3 +1,9 @@
-const doubleIt = (input) => input * 2
+import ViewSwitcher from 'ampersand-view-switcher'
 
-console.log('Double 1', doubleIt(1))
+import Router from './router'
+
+const container = document.querySelector('[data-hook~=main]')
+const viewSwitcher = new ViewSwitcher(container)
+
+const router = new Router({viewSwitcher: viewSwitcher})
+router.history.start({pushState: false})
