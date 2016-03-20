@@ -3,7 +3,7 @@ node_js:
   - "4.0"
 install:
   - npm install
-script: ~
+script: exit 0
 deploy:
   provider: script
   script: npm run deploy
